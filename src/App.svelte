@@ -1,9 +1,8 @@
 <script>
-	export let name;
 </script>
 
 <main>
-	<h1>{name}</h1>
+	<h1>Astro Park</h1>
 	<p>The place where you can play with the stars!</p>
 </main>
 

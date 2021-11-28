@@ -3,7 +3,7 @@
     import ApodView from "./UI/ApodView.svelte";
     import SearchView from "./UI/SearchView.svelte";
 
-    let path;
+    let path = 0;
 
     function setRoute(event) {
         path = event.detail;

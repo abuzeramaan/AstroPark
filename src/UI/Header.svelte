@@ -1,13 +1,50 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
+    const dispatch = createEventDispatcher();
+
+    let selectedButton = 0;
 </script>
 
 <nav class="navbar ">
     <h2 class="navbar-logo">Astro Park</h2>
     <ul class="navbar-list">
-        <li>Home</li>
-        <li>Library</li>
-        <li>Geo Satelite</li>
-        <li>About</li>
+        <li
+            class:active={selectedButton === 0}
+            on:click={() => {
+                selectedButton = 0;
+                dispatch("select", 0);
+            }}
+        >
+            Home
+        </li>
+        <li
+            class:active={selectedButton === 1}
+            on:click={() => {
+                selectedButton = 0;
+                dispatch("select", 1);
+            }}
+        >
+            Library
+        </li>
+        <li
+            class:active={selectedButton === 2}
+            on:click={() => {
+                selectedButton = 0;
+                dispatch("select", 2);
+            }}
+        >
+            Geo Satelite
+        </li>
+        <li
+            class:active={selectedButton === 3}
+            on:click={() => {
+                selectedButton = 0;
+                dispatch("select", 3);
+            }}
+        >
+            About
+        </li>
     </ul>
 </nav>
 
@@ -31,7 +68,7 @@
     nav ul li {
         height: 100%;
         margin: 0 10px;
-        padding: 15px 0px;;
+        padding: 15px 0px;
         font-size: 25px;
     }
 

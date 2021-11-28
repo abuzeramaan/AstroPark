@@ -4,7 +4,7 @@
 
     const baseUrl = "http://localhost:8080/search?q=";
     let url;
-    let data;
+    let filteredData;
     let pageData;
     let fetched = false;
     let hasValidData = true;
@@ -12,22 +12,17 @@
     let keyword = "";
 
     $: keywordValid = !isEmpty(keyword);
-    $: hasValidData = (data != 0);
+    $: hasValidData = filteredData != 0;
     // $: console.log(keyword);
 
     const fetchData = () => {
         if (keywordValid) {
             url = baseUrl + keyword.trim();
             axios.get(url).then((response) => {
-                if (response.data == 0) {
-                    data = [];
-                }
-                else {
-                    data = response.data;
-                }
-                pageData = data.slice(0, 8);
+                filteredData = response.data.filter(e => e.links !== undefined);
+                pageData = filteredData.slice(0, 8);
                 fetched = true;
-                console.log(pageData);
+                // console.log(pageData);
             });
         }
     };
@@ -47,12 +42,9 @@
     </div>
 </div>
 <div class="search-results">
-    {#if (fetched && hasValidData)}
+    {#if fetched && hasValidData}
         {#each pageData as element (element.href)}
-            <SearchElement
-                title={element.data[0].title}
-                imageUrl={element.links[0].href}
-            />
+            <SearchElement {element} />
         {/each}
     {:else if !hasValidData}
         <h2>No Data Found!</h2>

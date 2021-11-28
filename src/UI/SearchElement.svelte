@@ -1,8 +1,8 @@
 <script>
-    export let imageUrl;
-    export let title;
-    
-    // console.log(imageUrl, title);
+    export let element;
+
+    let title = element.data[0].title;
+    let imageUrl = element.links[0].href;
 </script>
 
 <div class="result">

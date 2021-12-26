@@ -6,8 +6,14 @@
     let selectedButton = 0;
 </script>
 
-<nav class="navbar ">
-    <h2 class="navbar-logo">Astro Park</h2>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap"
+    rel="stylesheet"
+/>
+<nav class="navbar nav-row">
+    <h2 class="navbar-logo">AstroPark</h2>
     <ul class="navbar-list">
         <li
             class:active={selectedButton === 0}
@@ -34,7 +40,7 @@
                 dispatch("select", 2);
             }}
         >
-            Geo Satelite
+            LIR
         </li>
         <li
             class:active={selectedButton === 3}
@@ -54,22 +60,25 @@
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        background-color: #10316b;
-        color: #ececeb;
+        background-color: solid #2C394B;
+        color: #a1a1a1;
     }
-
+    .nav-row{
+        background-color: #082032;
+        box-shadow: 0 8px 18px 2px #061928;
+    }
     nav ul {
         list-style-type: none;
         display: flex;
-        margin: 0 15px;
+        margin: 0 15px 2px;
         height: 100%;
     }
 
     nav ul li {
         height: 100%;
-        margin: 0 10px;
+        margin: 0px 10px 3px;
         padding: 15px 0px;
-        font-size: 25px;
+        font-size: 22px;
     }
 
     nav ul li:hover {
@@ -80,5 +89,6 @@
 
     nav h2 {
         padding: 0 15px;
+        margin-top: 10px;
     }
 </style>

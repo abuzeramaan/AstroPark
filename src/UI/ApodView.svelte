@@ -15,10 +15,7 @@
 
 <div class="main">
     <div class="main-content">
-        <img
-            src="{imageUrl}"
-            alt="{title}"
-        />
+        <img src={imageUrl} alt={title} />
         <div class="description">
             <span class="title">{title}</span>
             <p>{description}</p>
@@ -29,27 +26,34 @@
 
 <style>
     .main {
+        position: absolute;
+        top: 2.5rem;
         display: flex;
         margin-top: 30px;
         justify-content: center;
-        align-items: center;
+        align-items: bottom;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
     }
 
     .main-content {
-        width: 1500px;
-        height: 800px;
+        width: 100%;
+        height: 100%;
         position: relative;
     }
 
     .main-content img {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
     }
     .description {
-        width: 100%;
+        position: relative;
+        bottom: 10%;
+        width: 100vw;
         color: #fff;
         position: absolute;
-        bottom: 10px;
+        /* bottom: 10px; */
         padding: 0 15px 15px 15px;
         background-color: rgba(0, 0, 0, 0.5);
     }

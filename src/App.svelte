@@ -3,6 +3,7 @@
     import ApodView from "./UI/ApodView.svelte";
     import SearchView from "./UI/SearchView.svelte";
     import SatelliteView from "./UI/SatelliteView.svelte";
+    import AboutView from "./UI/AboutView.svelte";
 
     let path = 0;
 
@@ -20,6 +21,7 @@
     {:else if path === 2}
         <SatelliteView />
     {:else if path === 3}
-        <SearchView />
+        <AboutView />
     {/if}
+    <!-- <SatelliteView /> -->
 </main>

@@ -1,24 +1,23 @@
 <script>
     import { isEmpty } from "../helpers/validation.js";
-
+  
     let latitude = "";
     let longitude = "";
     let rDate = "";
     let pDate = "";
-
+  
     const baseUrl = "http://localhost:8080/satellite?";
     let recentUrl, pastUrl;
-
+  
     let isFormValid = false;
     let showImages = false;
-
+  
     $: latitudeValid = !isEmpty(latitude);
     $: longitudevalid = !isEmpty(longitude);
     $: rDatevalid = !isEmpty(rDate);
     $: pDatevalid = !isEmpty(pDate);
-    $: isFormValid =
-        latitudeValid && longitudevalid && rDatevalid && pDatevalid;
-
+    $: isFormValid = latitudeValid && longitudevalid && rDatevalid && pDatevalid;
+  
     const submitForm = () => {
         if (isFormValid) {
             recentUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=${rDate}`;
@@ -26,144 +25,193 @@
             showImages = true;
         }
     };
-</script>
-
-<div class="compare-container">
-    <h1>Want to compare the satellite images of a particular regin?</h1>
-    <button> Proceed</button>
-</div>
-<div class="main-compare-container">
-    <div class="form">
-        <div class="inputs">
-            <input
-                type="Number"
-                class="latitude"
-                on:input={(event) => (latitude = event.target.value)}
-                placeholder="Latitude"
-            />
-            <input
-                type="Number"
-                class="Longitude"
-                on:input={(event) => (longitude = event.target.value)}
-                placeholder="Longitude"
-            />
-            <input
-                type="date"
-                class="recent-date"
-                on:input={(event) => (rDate = event.target.value)}
-                placeholder="Recent date"
-            />
-            <input
-                type="date"
-                class="past-date"
-                on:input={(event) => (pDate = event.target.value)}
-                placeholder="Past date"
-            />
-        </div>
-        <input type="submit" on:click={submitForm} class="submit" />
-    </div>
-    <div class="compare-results">
-        <div class="results">
-            {#if showImages}
-                <div class="past-result">
-                    <img src={pastUrl} alt="Past" />
-                    <h3>Date:</h3>
+  </script>
+  
+    <div class="main-compare-container">
+        <h1>Want to compare the satellite images of a particular region?</h1>
+        <div class="form">
+            <div class="inputs">
+                <div class="input">
+                    <label for="latitude">Latitude</label>
+                    <input
+                        type="Number"
+                        id="latitude"
+                        class="latitude"
+                        on:input={(event) => (latitude = event.target.value)}
+                        placeholder="Latitude"
+                    />
                 </div>
-                <div class="recent-result">
-                    <img src={recentUrl} alt="Recent" />
-                    <h3>Date:</h3>
+                <div class="input">
+                    <label for="longitude">Longitude</label>
+                    <input
+                        type="Number"
+                        class="Longitude"
+                        id="longitude"
+                        on:input={(event) => (longitude = event.target.value)}
+                        placeholder="Longitude"
+                    />
                 </div>
-            {/if}
+                <div class="input">
+                    <label for="past-date">Past-date</label>
+                    <input
+                        id="past-date"
+                        type="date"
+                        class="recent-date"
+                        on:input={(event) => (rDate = event.target.value)}
+                        placeholder="Recent date"
+                    />
+                </div>
+            
+                <div class="input">
+                    <label for="present-date">Present-date</label>
+                    <input
+                        id="present-date"
+                        type="date"
+                        class="past-date"
+                        on:input={(event) => (pDate = event.target.value)}
+                        placeholder="Past date"
+                    />  
+                </div>
+            </div>
+            <input type="submit" on:click={submitForm} class="submit" />
+        </div>
+        <div class="compare-results">
+            <div class="results">
+                {#if showImages}
+                    <div class="past-result">
+                        <img src={pastUrl} alt="Past" />
+                        <h2>Date:</h2>
+                    </div>
+                    <div class="recent-result">
+                        <img src={recentUrl} alt="Recent" />
+                        <h2>Date:</h2>
+                    </div>
+                {/if}
+            </div>
         </div>
     </div>
-</div>
+  
+  <style>
 
-<style>
-    .compare-container {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .compare-container h1 {
+    .main-compare-container h1 {
+        position: relative;
         text-align: center;
+        background-color: #2C394B;
+        border-radius: 20px;
+        box-shadow: 0 0 10px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.1);
+        margin: 50px;
+        padding: 40px;
+        position: relative;
+    } 
+    .input {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
-    .compare-container button {
-        outline: none;
-        padding: 7px 10px;
-        margin: 0;
-        background-color: #10316b;
-        color: #fff;
-        font-size: 18px;
-        border: none;
-        cursor: pointer;
-    }
-
+  
     .main-compare-container {
-        height: 100vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: #a1a1a1;
     }
-
+  
     .main-compare-container .form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 30px;
-        padding: 15px 20px;
+        position: relative;
+        padding: 30px 40px 15px;
+        background-color: #203646;
         border-radius: 20px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 3px 2px #071c2d, 0 20px 25px 0 rgba(0, 0, 0, 0.99);
+        font-size: 20px;
+        margin-bottom: 30px;
     }
-
+    .inputs {
+        display: flex;
+        flex-direction: column;
+    }
+  
     .main-compare-container .form input {
-        padding: 5px 10px;
+        height: 60px;
+        width: 100%;
+        padding: 15px 20px;
         border-radius: 10px;
         outline: none;
-        border: 1px solid #000;
+        border: 1px solid rgb(0, 0, 0);
+        position: relative;
     }
-
+  
+    .main-compare-container .form input::placeholder {
+        font-size: 25px;
+    }
+    label {
+        width: 150px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+  
     .main-compare-container .form input[type="submit"] {
         outline: none;
-        padding: 7px 10px;
+        padding: 10px 10px;
         margin-top: 10px;
-        background-color: #10316b;
         color: #fff;
-        font-size: 18px;
+        font-size: 25px;
         border: none;
         cursor: pointer;
+        width: 30%;
+        background-color: #082032;
+        border-radius: 30px;
+        box-shadow: 0 0 15px 0 #a1a1a1, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
     }
 
+    .main-compare-container .form input[type="submit"]:hover{
+        background-color: #a1a1a1;
+        color: #082032;
+    }
+  
+    .main-compare-container .form input[type="date"] {
+        font-size: 25px;
+        color: rgb(121, 115, 115);
+    }
+  
     .compare-results {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-
+  
     .results {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 30px;
     }
-
+  
     .past-result,
     .recent-result {
-        width: 400px;
-        height: 400px;
+        width: 45%;
+        /* height: 100%; */
         margin: 20px;
         text-align: center;
     }
-
+  
     .past-result img,
     .recent-result img {
         height: 100%;
         width: 100%;
     }
-</style>
+
+    img{
+        border: 5px solid #a1a1a1;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+  </style>
+  

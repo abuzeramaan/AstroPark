@@ -53,7 +53,7 @@
 
 <style>
     .error {
-        color: red;
+        color: #FF4C29;
         display: flex;
         justify-content: center;
     }
@@ -65,22 +65,33 @@
         position: relative;
         height: 20vh;
     }
-
+    ::placeholder{
+        color: #fff;
+        opacity: 0.3;
+    }
     .search .search-container input {
         outline: none;
-        padding: 5px 10px;
+        padding: 7px 10px;
         margin: 0;
         font-size: 18px;
+        border: none;
+        color: #fff;
+        background-color: #2C394B;
+        border-radius: 30px 0px 0px 30px;
+        box-shadow: 0 0 10px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.1);
+
     }
     .search .search-container button {
         outline: none;
         padding: 7px 10px;
         margin: 0;
-        background-color: #10316b;
+        background-color: #2C394B;
+        border-radius: 0px 30px 30px 0px;
         color: #fff;
         font-size: 18px;
         border: none;
         cursor: pointer;
+        box-shadow: 0 0 10px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.1);
     }
 
     .search-results {

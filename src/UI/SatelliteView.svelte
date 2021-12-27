@@ -56,8 +56,7 @@
                     <input
                         id="past-date"
                         type="date"
-                        class="recent-date"
-                        on:input={(event) => (rDate = event.target.value)}
+                        on:input={(event) => (pDate = event.target.value)}
                         placeholder="Recent date"
                     />
                 </div>
@@ -67,8 +66,7 @@
                     <input
                         id="present-date"
                         type="date"
-                        class="past-date"
-                        on:input={(event) => (pDate = event.target.value)}
+                        on:input={(event) => (rDate = event.target.value)}
                         placeholder="Past date"
                     />  
                 </div>
@@ -80,11 +78,11 @@
                 {#if showImages}
                     <div class="past-result">
                         <img src={pastUrl} alt="Past" />
-                        <h2>Date:</h2>
+                        <h2>Date: {pDate}</h2>
                     </div>
                     <div class="recent-result">
                         <img src={recentUrl} alt="Recent" />
-                        <h2>Date:</h2>
+                        <h2>Date: {rDate}</h2>
                     </div>
                 {/if}
             </div>

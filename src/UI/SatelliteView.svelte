@@ -6,7 +6,7 @@
     let rDate = "";
     let pDate = "";
   
-    const baseUrl = "http://localhost:8080/satellite?";
+    const baseUrl = "https://astropark.herokuapp.com/satellite?";
     let recentUrl, pastUrl;
   
     let isFormValid = false;

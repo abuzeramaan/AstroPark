@@ -2,7 +2,7 @@
     import SearchElement from "../Elements/SearchElement.svelte";
     import { isEmpty } from "../helpers/validation.js";
 
-    const baseUrl = "http://localhost:8080/search?q=";
+    const baseUrl = "https://astropark.herokuapp.com/search?q=";
     let url;
     let filteredData;
     let pageData;

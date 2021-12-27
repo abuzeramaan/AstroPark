@@ -4,7 +4,7 @@
     let description;
     let owner;
 
-    axios.get("http://localhost:8080/apod").then((response) => {
+    axios.get("https://astropark.herokuapp.com/apod").then((response) => {
         // console.log(response);
         imageUrl = response.data.url;
         title = response.data.title;

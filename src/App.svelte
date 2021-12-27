@@ -23,5 +23,4 @@
     {:else if path === 3}
         <AboutView />
     {/if}
-    <!-- <SatelliteView /> -->
 </main>

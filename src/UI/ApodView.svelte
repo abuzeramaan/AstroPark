@@ -59,6 +59,6 @@
     }
 
     .description .title {
-        font-size: 25px;
+        font-size: 30px;
     }
 </style>

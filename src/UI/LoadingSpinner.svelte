@@ -13,7 +13,9 @@
 
 <style>
     h1 {
-        margin: 0;
+        text-align: center;
+        height: max-content;
+        margin-top: 30vh;
         padding: 0;
         font-family: ‘Arial Narrow’, sans-serif;
         font-weight: 100;
@@ -31,48 +33,48 @@
     }
 
     .let1 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0s;
     }
 
     .let2 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.1s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.1s;
     }
 
     .let3 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.2s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.2s;
     }
 
     .let4 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.3s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.3s;
     }
 
     .let5 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.4s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.4s;
     }
 
     .let7 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.5s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.5s;
     }
 
     .let8 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.6s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.6s;
     }
 
     .let9 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.7s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.7s;
     }
 
     .let10 {
-        animation: drop 1.3s ease-in-out infinite;
-        animation-delay: 3.8s;
+        animation: drop 1.1s ease-in-out infinite;
+        animation-delay: 0.8s;
     }
     /* 
 .let10 {

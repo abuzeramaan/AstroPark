@@ -1,8 +1,12 @@
 <script>
+    import LoadingSpinner from "./LoadingSpinner.svelte";
+
     let imageUrl;
     let title;
     let description;
     let owner;
+
+    let fetched = false;
 
     axios.get("https://astropark.herokuapp.com/apod").then((response) => {
         // console.log(response);
@@ -10,17 +14,22 @@
         title = response.data.title;
         description = response.data.explanation;
         owner = response.data.copyright;
+        fetched = true;
     });
 </script>
 
 <div class="main">
     <div class="main-content">
-        <img src={imageUrl} alt={title} />
-        <div class="description">
-            <span class="title">{title}</span>
-            <p>{description}</p>
-            <span class="owner">-{owner}</span>
-        </div>
+        {#if !fetched}
+            <LoadingSpinner />
+        {:else}
+            <img src={imageUrl} alt={title} />
+            <div class="description">
+                <span class="title">{title}</span>
+                <p>{description}</p>
+                <span class="owner">-{owner}</span>
+            </div>
+        {/if}
     </div>
 </div>
 
@@ -44,6 +53,7 @@
     }
 
     .main-content img {
+        vertical-align: middle;
         width: 100vw;
         height: 100vh;
     }

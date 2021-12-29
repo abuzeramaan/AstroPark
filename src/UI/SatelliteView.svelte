@@ -1,112 +1,135 @@
 <script>
     import { isEmpty } from "../helpers/validation.js";
-  
+    import LoadingSpinnerSat from "./LoadingSpinnerSat.svelte";
+
     let latitude = "";
     let longitude = "";
     let rDate = "";
     let pDate = "";
-  
+
     const baseUrl = "https://astropark.herokuapp.com/satellite?";
     let recentUrl, pastUrl;
-  
+
     let isFormValid = false;
     let showImages = false;
-  
+
     $: latitudeValid = !isEmpty(latitude);
     $: longitudevalid = !isEmpty(longitude);
     $: rDatevalid = !isEmpty(rDate);
     $: pDatevalid = !isEmpty(pDate);
-    $: isFormValid = latitudeValid && longitudevalid && rDatevalid && pDatevalid;
-  
+    $: isFormValid =
+        latitudeValid && longitudevalid && rDatevalid && pDatevalid;
+
     const submitForm = () => {
         if (isFormValid) {
+            showImages = true;
+
+            let outputImg1 = document.getElementById("past-image");
+            let outputImg2 = document.getElementById("present-image");
+
             recentUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=${rDate}`;
             pastUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=${pDate}`;
-            showImages = true;
+
+            fetch(pastUrl).then((response) => {
+                response.blob().then((blobResponse) => {
+                    outputImg1.src = urlCreator.createObjectURL(blobResponse);
+                });
+            });
+
+            fetch(pastUrl).then((response) => {
+                response.blob().then((blobResponse) => {
+                    outputImg2.src = urlCreator.createObjectURL(blobResponse);
+                });
+            });
         }
     };
-  </script>
-  
-    <div class="main-compare-container">
-        <h1>Want to compare the satellite images of a particular region?</h1>
-        <div class="form">
-            <div class="inputs">
-                <div class="input">
-                    <label for="latitude">Latitude</label>
-                    <input
-                        type="Number"
-                        id="latitude"
-                        class="latitude"
-                        on:input={(event) => (latitude = event.target.value)}
-                        placeholder="Latitude"
-                    />
-                </div>
-                <div class="input">
-                    <label for="longitude">Longitude</label>
-                    <input
-                        type="Number"
-                        class="Longitude"
-                        id="longitude"
-                        on:input={(event) => (longitude = event.target.value)}
-                        placeholder="Longitude"
-                    />
-                </div>
-                <div class="input">
-                    <label for="past-date">Past-date</label>
-                    <input
-                        id="past-date"
-                        type="date"
-                        on:input={(event) => (pDate = event.target.value)}
-                        placeholder="Recent date"
-                    />
-                </div>
-            
-                <div class="input">
-                    <label for="present-date">Present-date</label>
-                    <input
-                        id="present-date"
-                        type="date"
-                        on:input={(event) => (rDate = event.target.value)}
-                        placeholder="Past date"
-                    />  
-                </div>
+
+    const urlCreator = window.URL || window.webkitURL;
+</script>
+
+<div class="main-compare-container">
+    <h1>Want to compare the satellite images of a particular region?</h1>
+    <div class="form">
+        <div class="inputs">
+            <div class="input">
+                <label for="latitude">Latitude</label>
+                <input
+                    type="Number"
+                    id="latitude"
+                    class="latitude"
+                    on:input={(event) => (latitude = event.target.value)}
+                    placeholder="Latitude"
+                />
             </div>
-            <input type="submit" on:click={submitForm} class="submit" />
+            <div class="input">
+                <label for="longitude">Longitude</label>
+                <input
+                    type="Number"
+                    class="Longitude"
+                    id="longitude"
+                    on:input={(event) => (longitude = event.target.value)}
+                    placeholder="Longitude"
+                />
+            </div>
+            <div class="input">
+                <label for="past-date">Past-date</label>
+                <input
+                    id="past-date"
+                    type="date"
+                    on:input={(event) => (pDate = event.target.value)}
+                    placeholder="Recent date"
+                />
+            </div>
+
+            <div class="input">
+                <label for="present-date">Present-date</label>
+                <input
+                    id="present-date"
+                    type="date"
+                    on:input={(event) => (rDate = event.target.value)}
+                    placeholder="Past date"
+                />
+            </div>
         </div>
-        <div class="compare-results">
-            <div class="results">
+        <input type="submit" on:click={submitForm} class="submit" />
+    </div>
+    <div class="compare-results">
+        <div class="results">
+            <div class="past-result">
+                <img id="past-image" alt="Past" />
                 {#if showImages}
-                    <div class="past-result">
-                        <img src={pastUrl} alt="Past" />
-                        <h2>Date: {pDate}</h2>
-                    </div>
-                    <div class="recent-result">
-                        <img src={recentUrl} alt="Recent" />
-                        <h2>Date: {rDate}</h2>
-                    </div>
+                    <LoadingSpinnerSat />
+                    <h2>Date: {pDate}</h2>
+                {/if}
+            </div>
+            <div class="recent-result">
+                <img id="present-image" alt="Recent" />
+                {#if showImages}
+                    <LoadingSpinnerSat />
+                    <h2>Date: {rDate}</h2>
                 {/if}
             </div>
         </div>
     </div>
-  
-  <style>
+</div>
 
+<style>
     .main-compare-container h1 {
         position: relative;
         text-align: center;
-        background-color: #2C394B;
+        background-color: #2c394b;
         border-radius: 20px;
         box-shadow: 0 0 10px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.1);
         margin: 50px;
         padding: 40px;
         position: relative;
-    } 
+    }
     .input {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-  
+
     .main-compare-container {
         height: 100%;
         display: flex;
@@ -115,7 +138,7 @@
         align-items: center;
         color: #a1a1a1;
     }
-  
+
     .main-compare-container .form {
         display: flex;
         flex-direction: column;
@@ -133,7 +156,7 @@
         display: flex;
         flex-direction: column;
     }
-  
+
     .main-compare-container .form input {
         height: 60px;
         width: 100%;
@@ -143,7 +166,7 @@
         border: 1px solid rgb(0, 0, 0);
         position: relative;
     }
-  
+
     .main-compare-container .form input::placeholder {
         font-size: 25px;
     }
@@ -152,7 +175,7 @@
         font-size: 20px;
         margin-right: 20px;
     }
-  
+
     .main-compare-container .form input[type="submit"] {
         outline: none;
         padding: 10px 10px;
@@ -167,30 +190,30 @@
         box-shadow: 0 0 15px 0 #a1a1a1, 0 20px 25px 0 rgba(0, 0, 0, 0.2);
     }
 
-    .main-compare-container .form input[type="submit"]:hover{
+    .main-compare-container .form input[type="submit"]:hover {
         background-color: #a1a1a1;
         color: #082032;
     }
-  
+
     .main-compare-container .form input[type="date"] {
         font-size: 25px;
         color: rgb(121, 115, 115);
     }
-  
+
     .compare-results {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-  
+
     .results {
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 30px;
     }
-  
+
     .past-result,
     .recent-result {
         width: 45%;
@@ -198,18 +221,16 @@
         margin: 20px;
         text-align: center;
     }
-  
+
     .past-result img,
     .recent-result img {
         height: 100%;
         width: 100%;
     }
 
-    img{
+    img {
         border: 5px solid #a1a1a1;
         border-radius: 5px;
         position: relative;
     }
-    
-  </style>
-  
+</style>

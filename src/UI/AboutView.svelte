@@ -11,45 +11,66 @@
     <div>
         <h2 class="first">About</h2>
     </div>
-    <div>
+    <div class="two">
         <h2 class="second">Description</h2>
-        <ul>
-          <li>AstroPark is a full stack web application which illustrates the usage of some the APIs provided by NASA.</li>
-          <li>It provides a simple interface which gives a user the convenience to access the desired information regarding NASA.</li>
-          <li>It uses NASA API to achieve its motive.(<a href="https://api.nasa.gov/">https://api.nasa.gov/</a>)</li>
-          <li>It is a dynamic webpage created using a frontend tool SvelteJs.</li>
-          <li>It renders the dynamic data received from the server and displays it to the user.</li>
-          <li>It’s the only point by which a user can interact with the Rest API.</li>
-          <li>REST API interacts with both User Interface and NASA API. It is build using NodeJS and ExpressJS.</li>
-          <li>The NASA API gives access to its resources only to authorised users who own an API key. The NASA API provides the user data related to NASA along with imagery.</li>
-        </ul>
+      </div>
+        <div class="section-2">
+          <div class="tab">
+            <h3>AstroPark</h3>
+            AstroPark is a project built up using the NASA API. It has two segments - a Frontend part and a Backend part. Frontend portrays the information received from the backend. The backend works as an intermediate proxy server which processes and pipes the response back to the frontend.<br> AstroPart comprises of the given features.
+            <br>- APOD Homepage
+            <br>- Media Library
+            <br>_ Landsat Image Retriever(LIR)
+          </div>
+          <div class="tab">
+            <h3>APOD Homepage</h3>
+            The APOD Homepage is an informative homepage. This homepage is designed with the help of APOD API provided by NASA. The cover page of AstroPark changes on a daily basis. Along with the picture, user is provided with some description related to the picture.
+          </div>
+          <div class="tab">
+            <h3>Library</h3>
+            AstroPark Media Library develops a link with Media Library of NASA. The required data is retrieved based upon the keyword. As a result, a grid of pictures are displayed based upon the keyword. And along with the pictures, the information regarding those pictures is also displayed to the user.
+          </div>
+          <div class="tab">
+            <h3>Landsat Image Retriever</h3>
+            LIR feature works with the help of Earth API. The user is required to fill the details in the given form. Based upon the values of Latitude and Longitude, the satellite images of that particular region taken on the provided dates are retrieved, proccessed from the database and are displayed. 
+          </div>
+        </div>
 
-    </div>
     <div>
         <h2 class="third">Meet the Team</h2>
         <div class="box">
-          <div class="flip-card column">
+          <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="./Images/img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                <img src="./Images/A1.jpg" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
               </div>
               <div class="flip-card-back">
-                <h1>John Doe</h1> 
-                <p>Architect & Engineer</p> 
-                <p>We love that guy</p>
+                <h1>Habeeb Ullah</h1> 
+                <p>Backend Developer</p> 
+                <!-- <p>We love that guy</p> -->
+
+                <a target="_blank" href="https://twitter.com/TheOpCoder" class="fab fa-twitter-square"> </a>
+                <a target="_blank" href="https://github.com/HabeebUllahTabrez" class="fab fa-github-square"> </a>
+                <a target="_blank" href="https://www.linkedin.com/in/mohammed-habeeb-ullah-tabrez-914001191/" class="fab fa-linkedin"> </a>
+
               </div>
             </div>
           </div>
   
-          <div class="flip-card column">
+          <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="./Images/img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+                <img src="./Images/A2.jpeg" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
               </div>
               <div class="flip-card-back">
-                <h1>John Doe</h1> 
-                <p>Architect & Engineer</p> 
-                <p>We love that guy</p>
+                <h1>Sadiya Noorain</h1> 
+                <p>Frontend Developer</p> 
+                <!-- <p>We love that guy</p> -->
+
+                <a target="_blank" href="https://twitter.com/Sadiya_0613" class="fab fa-twitter-square"> </a>
+                <a target="_blank" href="https://github.com/Sadiya1noorain" class="fab fa-github-square"> </a>
+                <a target="_blank" href="https://www.linkedin.com/in/sadiya-noorain/" class="fab fa-linkedin"> </a>
+
               </div>
             </div>
           </div>
@@ -57,30 +78,17 @@
 
     </div>
     <div>
-        <h2 class="fourth">Know More</h2>
-        <p>
-          To know more about our project, follow xyz......
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p><p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem animi excepturi deserunt minima sequi distinctio quibusdam nobis qui at odio, incidunt a esse, ab non necessitatibus? Quae quasi inventore vitae.
-        </p>
+        <h2 class="fourth" style="margin-bottom:20px">Know More About the Project</h2>
+        <div class="section-4">
+          <p>The frontend is created using SvelteJS and it is deployed on GitHub pages <a target="_blank" href="https://habeebullahtabrez.github.io/AstroPark" class="know">https://habeebullahtabrez.github.io/AstroPark</a></p>
+        <p>The backend is created using NodeJS and ExpressJS. It is deployed on Heroku <a target="_blank" href="https://astropark.herokuapp.com/" class="know">https://astropark.herokuapp.com/</a></p>
+        <p>To view the source code of the Frontend visit : <a target="_blank" href="https://github.com/HabeebUllahTabrez/AstroPark" class="know">https://github.com/HabeebUllahTabrez/AstroPark</a></p>
+        <p>To view the source code of the Backend visit : <a target="_blank" href="https://github.com/HabeebUllahTabrez/AstroPark-REST-API" class="know">https://github.com/HabeebUllahTabrez/AstroPark-REST-API</a></p>
+        <p>The documentation of AstroPark is availabele on</p>
+        <p>The PPT of AstroPark is availabele on</p>
+        <p>To know more, contact us </p>
+        </div>
+        
     </div>
     
     
@@ -154,41 +162,29 @@
 }
 
 #main{
-  background-image: linear-gradient(to bottom, #082032, #152a3c, #213546, #2d4150, #394c5a);
-}
-
-h2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-}
-
-li{
-    font-size: small;
-    color: #FFF;
-    /* text-align: center; */
-    font-size: 30px;
-    list-style: square;
-    list-style-position: outside;
-}
-
-ul{
-  padding: 30px;
-  margin: 40px;
+  background-image: linear-gradient(to bottom, #082032, #192d3e, #293b4a, #394956, #495863);
 }
 
 .first{
   font-size: 240px;
   color: #a1a1a1;
+  height: 40vh;
 }
 
 .second,
 .third,
 .fourth{
-    font-size: 60px;
-    color: wheat;
+  font-size: 60px;
+  color: wheat;
+}
+
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-weight: bolder;
 }
 
 .flip-card {
@@ -196,7 +192,7 @@ ul{
   width: 300px;
   height: 300px;
   perspective: 1000px;
-  margin: 30px;
+  margin: 20px 150px;
 }
 
 .flip-card-inner {
@@ -234,30 +230,50 @@ ul{
 
 .box{
   display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* .column{
-  float: left;
-  padding: 50px;
-} */
-
-/* div:nth-child(5){
-    height: 350px;
+.fab{
+  color: #394c5a;
+  padding: 20px;
+  font-size: 35px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
 }
 
-div:nth-child(6){
-    height: 800px;
+.fab:hover{
+  opacity: 0.7;
 }
 
-div:nth-child(7){
-    height: 800px;
+.section-2{
+  color: #c1c7cc;
+  padding: 30px 120px;
+  margin: 30px 120px;
+  font-size: 20px;
+  line-height: 1.5em;
 }
 
-div:nth-child(8){
-    height: 800px;
-} */
+h3{
+  font-size: 40px;
+  line-height: 2em;
+  text-decoration: #c1c7cc dashed underline;
+  text-underline-position: under;
+}
+
+.section-4{
+  color: #c1c7cc;
+  padding: 20px 120px;
+  margin: 20px 120px;
+  font-size: 25px;
+  line-height: 1.5em;
+}
+
+.know{
+  color: #2597ed;
+}
     
 </style>

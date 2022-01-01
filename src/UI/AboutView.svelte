@@ -85,7 +85,7 @@
         <p>To view the source code of the Frontend visit : <a target="_blank" href="https://github.com/HabeebUllahTabrez/AstroPark" class="know">https://github.com/HabeebUllahTabrez/AstroPark</a></p>
         <p>To view the source code of the Backend visit : <a target="_blank" href="https://github.com/HabeebUllahTabrez/AstroPark-REST-API" class="know">https://github.com/HabeebUllahTabrez/AstroPark-REST-API</a></p>
         <p>The documentation of AstroPark is availabele on</p>
-        <p>The PPT of AstroPark is availabele on</p>
+        <p>The PPT of AstroPark is available on</p>
         <p>To know more, contact us </p>
         </div>
         

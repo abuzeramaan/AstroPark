@@ -42,7 +42,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="./Images/A1.jpg" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
+                <img src="./Images/A1.png" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
               </div>
               <div class="flip-card-back">
                 <h1>Habeeb Ullah</h1> 
@@ -60,7 +60,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="./Images/A2.jpeg" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
+                <img src="./Images/A2.png" alt="Avatar" style="width:300px;height:300px;border-radius:30px">
               </div>
               <div class="flip-card-back">
                 <h1>Sadiya Noorain</h1> 

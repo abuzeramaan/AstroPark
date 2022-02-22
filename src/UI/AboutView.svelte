@@ -158,7 +158,14 @@
           >https://github.com/HabeebUllahTabrez/AstroPark-REST-API</a
         >
       </p>
-      <p>The documentation of AstroPark is available on</p>
+      <p>The documentation of AstroPark is available on <a
+        target="_blank"
+        href="https://www.icloud.com/pages/0d2Q3FjATEaH2gfbK0xs20Anw#Report"
+        class="know"
+        >https://www.icloud.com/pages/0d2Q3FjATEaH2gfbK0xs20Anw#Report</a
+      >
+
+      </p>
       <p>
         The PPT of AstroPark is available on <a
           target="_blank"

@@ -20,8 +20,8 @@
   <div class="section-2">
     <div class="tab">
       <h3>AstroPark</h3>
-      AstroPark is a project built up using the NASA API. It has two segments - a
-      Frontend part and a Backend part. Frontend portrays the information received
+      AstroPark is a project built using the NASA API. It has two segments - a
+      Frontend and a Backend. Frontend portrays the information received
       from the backend. The backend works as an intermediate proxy server which processes
       and pipes the response back to the frontend.<br /> AstroPart comprises of
       the given features.

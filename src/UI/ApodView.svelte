@@ -27,7 +27,7 @@
             <div class="description">
                 <span class="title">{title}</span>
                 <p>{description}</p>
-                <span class="owner">-{owner}</span>
+                <span class="owner">-{owner || "Unknown"}</span>
             </div>
         {/if}
     </div>

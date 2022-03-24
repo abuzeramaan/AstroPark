@@ -4,15 +4,15 @@
     let title = element.data[0].title;
     let imageUrl = element.links[0].href;
     let description = element.data[0].description;
-  </script>
-  
-  <div class="result">
+</script>
+
+<div class="result">
     <img src={imageUrl} alt={title} />
     <h3>{title}</h3>
     <p class="desc">{description}</p>
-  </div>
-  
-  <style>
+</div>
+
+<style>
     .result {
         height: 300px;
         width: 400px;
@@ -23,26 +23,26 @@
         overflow: hidden;
         box-shadow: 0 0 100px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.99);
     }
-  
+
     .result img {
-      height: 100%;
-      width: 100%;
+        height: 100%;
+        width: 100%;
     }
-  
+
     .result h3 {
         font-size: 22px;
-      position: absolute;
-      bottom: -5%;
-      color: #fff;
-      padding: 0 15px 15px 15px;
-      background-color: rgba(0, 0, 0, 0.5);
-      width: 100%;
+        position: absolute;
+        bottom: -5%;
+        color: #fff;
+        padding: 0 15px 15px 15px;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
     }
-  
+
     .result:hover .desc {
-    transform: translateY(0);
+        transform: translateY(0);
     }
-  
+
     .desc {
         font-size: 18px;
         background-color: #334756;
@@ -58,9 +58,7 @@
         box-shadow: 0 0 50px 0 #334756, 0 20px 25px 0 rgba(0, 0, 0, 0.5);
     }
 
-    p{
+    p {
         color: #fff;
     }
-
-  </style>
-  
+</style>

@@ -1,1 +1,1 @@
-# AstroPark
+# AstroPark - Internship Project

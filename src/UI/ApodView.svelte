@@ -8,7 +8,7 @@
 
     let fetched = false;
 
-    axios.get("https://astropark.herokuapp.com/apod").then((response) => {
+    axios.get("https://astro-back.onrender.com/apod").then((response) => {
         // console.log(response);
         imageUrl = response.data.url;
         title = response.data.title;

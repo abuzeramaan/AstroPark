@@ -139,8 +139,8 @@
         The backend is created using NodeJS and ExpressJS. It is deployed on
         Heroku <a
           target="_blank"
-          href="https://astropark.herokuapp.com/"
-          class="know">https://astropark.herokuapp.com/</a
+          href="https://astro-back.onrender.com/"
+          class="know">https://astro-back.onrender.com/</a
         >
       </p>
       <p>

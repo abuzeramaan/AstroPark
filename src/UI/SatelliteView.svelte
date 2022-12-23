@@ -8,7 +8,7 @@
     let rDate = "";
     let pDate = "";
 
-    const baseUrl = "https://astropark.herokuapp.com/satellite?";
+    const baseUrl = "https://astro-back.onrender.com/satellite?";
     let recentUrl, pastUrl;
 
     let isLoading1 = false;

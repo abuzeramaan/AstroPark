@@ -2,7 +2,7 @@
     import SearchElement from "../Elements/SearchElement.svelte";
     import { isEmpty } from "../helpers/validation.js";
 
-    const baseUrl = "https://astro-back.onrender.com/search?q=";
+    const baseUrl = "https://flashifyapi.onrender.com/search?q=";
     let url;
     let filteredData;
     let pageData;

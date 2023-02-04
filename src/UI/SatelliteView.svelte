@@ -8,7 +8,7 @@
     let rDate = "";
     let pDate = "";
 
-    const baseUrl = "https://astro-back.onrender.com/satellite?";
+    const baseUrl = "https://flashifyapi.onrender.com/satellite?";
     let recentUrl, pastUrl;
 
     let isLoading1 = false;
@@ -29,8 +29,8 @@
 
     const submitForm = () => {
         if (isFormValid) {
-            recentUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=${rDate}`;
-            pastUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=${pDate}`;
+            recentUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=2016-02-01`;
+            pastUrl = `${baseUrl}latitude=${latitude}&longitude=${longitude}&date=2014-02-01`;
             showImages = true;
             isLoading1 = true;
             isLoading2 = true;
@@ -84,25 +84,6 @@
                     id="longitude"
                     on:input={(event) => (longitude = event.target.value)}
                     placeholder="Longitude"
-                />
-            </div>
-            <div class="input">
-                <label for="past-date">Past-date</label>
-                <input
-                    id="past-date"
-                    type="date"
-                    on:input={(event) => (pDate = event.target.value)}
-                    placeholder="Recent date"
-                />
-            </div>
-
-            <div class="input">
-                <label for="present-date">Present-date</label>
-                <input
-                    id="present-date"
-                    type="date"
-                    on:input={(event) => (rDate = event.target.value)}
-                    placeholder="Past date"
                 />
             </div>
         </div>

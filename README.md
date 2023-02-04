@@ -1,1 +1,1 @@
-# AstroPark - Internship Project
+# Flashify - Internship Project

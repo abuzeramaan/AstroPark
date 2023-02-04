@@ -19,8 +19,8 @@
   </div>
   <div class="section-2">
     <div class="tab">
-      <h3>AstroPark</h3>
-      AstroPark is a project built using the NASA API. It has two segments - a
+      <h3>Flashify</h3>
+      Flashify is a project built using the NASA API. It has two segments - a
       Frontend and a Backend. Frontend portrays the information received
       from the backend. The backend works as an intermediate proxy server which processes
       and pipes the response back to the frontend.<br /> AstroPart comprises of
@@ -32,13 +32,13 @@
     <div class="tab">
       <h3>APOD Homepage</h3>
       The APOD Homepage is an informative homepage. This homepage is designed with
-      the help of APOD API provided by NASA. The cover page of AstroPark changes
+      the help of APOD API provided by NASA. The cover page of Flashify changes
       on a daily basis. Along with the picture, user is provided with some description
       related to the picture.
     </div>
     <div class="tab">
       <h3>Library</h3>
-      AstroPark Media Library develops a link with Media Library of NASA. The required
+      Flashify Media Library develops a link with Media Library of NASA. The required
       data is retrieved based upon the keyword. As a result, a grid of pictures are
       displayed based upon the keyword. And along with the pictures, the information
       regarding those pictures is also displayed to the user.
@@ -65,15 +65,8 @@
             />
           </div>
           <div class="flip-card-back">
-            <h1>Habeeb Ullah</h1>
-            <p>Backend Developer</p>
-            <!-- <p>We love that guy</p> -->
-
-            <a
-              target="_blank"
-              href="https://twitter.com/TheOpCoder"
-              class="fab fa-twitter-square"
-            />
+            <h1>Abuzer Amaan</h1>
+            <p>Fullstack Developer</p>
             <a
               target="_blank"
               href="https://github.com/HabeebUllahTabrez"
@@ -82,7 +75,7 @@
             <a
               target="_blank"
               href="https://www.linkedin.com/in/mohammed-habeeb-ullah-tabrez-914001191/"
-              class="fab fa-linkedin"
+              class="fab fa-linkedin
             />
           </div>
         </div>
@@ -92,21 +85,40 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="./Images/A2.png"
+              src="./Images/A1.png"
               alt="Avatar"
               style="width:300px;height:300px;border-radius:30px"
             />
           </div>
           <div class="flip-card-back">
-            <h1>Sadiya Noorain</h1>
-            <p>Frontend Developer</p>
-            <!-- <p>We love that guy</p> -->
-
+            <h1>Abdul Mateen Khan</h1>
+            <p>Fullstack Developer</p>
             <a
               target="_blank"
-              href="https://twitter.com/Sadiya_0613"
-              class="fab fa-twitter-square"
+              href="https://github.com/Sadiya1noorain"
+              class="fab fa-github-square"
             />
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/sadiya-noorain/"
+              class="fab fa-linkedin"
+            />
+          </div>
+        </div>
+      </div>
+
+            <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="./Images/A1.png"
+              alt="Avatar"
+              style="width:300px;height:300px;border-radius:30px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>Mohammed Saad</h1>
+            <p>Fullstack Developer</p>
             <a
               target="_blank"
               href="https://github.com/Sadiya1noorain"
@@ -128,50 +140,19 @@
     </h2>
     <div class="section-4">
       <p>
-        The frontend is created using SvelteJS and it is deployed on GitHub
-        pages <a
+        The frontend is created using SvelteJS and it is deployed on Vercel
+       <a
           target="_blank"
-          href="https://habeebullahtabrez.github.io/AstroPark"
-          class="know">https://habeebullahtabrez.github.io/AstroPark</a
+          href="https://flashifyweb.xyz/"
+          class="know">https://flashifyweb.xyz</a
         >
       </p>
       <p>
         The backend is created using NodeJS and ExpressJS. It is deployed on
-        Heroku <a
+        Render <a
           target="_blank"
-          href="https://astro-back.onrender.com/"
-          class="know">https://astro-back.onrender.com/</a
-        >
-      </p>
-      <p>
-        To view the source code of the Frontend visit : <a
-          target="_blank"
-          href="https://github.com/HabeebUllahTabrez/AstroPark"
-          class="know">https://github.com/HabeebUllahTabrez/AstroPark</a
-        >
-      </p>
-      <p>
-        To view the source code of the Backend visit : <a
-          target="_blank"
-          href="https://github.com/HabeebUllahTabrez/AstroPark-REST-API"
-          class="know"
-          >https://github.com/HabeebUllahTabrez/AstroPark-REST-API</a
-        >
-      </p>
-      <p>The documentation of AstroPark is available on <a
-        target="_blank"
-        href="https://www.icloud.com/pages/0d2Q3FjATEaH2gfbK0xs20Anw#Report"
-        class="know"
-        >https://www.icloud.com/pages/0d2Q3FjATEaH2gfbK0xs20Anw#Report</a
-      >
-
-      </p>
-      <p>
-        The PPT of AstroPark is available on <a
-          target="_blank"
-          href="https://www.icloud.com/keynote/0048dnY4SFdIVXCWdeBcL0qAg#PPT_1"
-          class="know"
-          >https://www.icloud.com/keynote/0048dnY4SFdIVXCWdeBcL0qAg#PPT_1</a
+          href="https://flashifyapi.onrender.com"
+          class="know">https://flashifyapi.onrender.com</a
         >
       </p>
       <p>To know more, contact us</p>

@@ -32,8 +32,8 @@
     <div class="tab">
       <h3>APOD Homepage</h3>
       The APOD Homepage is an informative homepage. This homepage is designed with
-      the help of APOD API provided by NASA. The cover page of Flashify changes
-      on a daily basis. Along with the picture, user is provided with some description
+      the help of APOD API provided by NASA. The cover page of AstroPark changes
+      on a daily basis. Along with the picture, user is provided with some descriptions
       related to the picture.
     </div>
     <div class="tab">
@@ -66,7 +66,13 @@
           </div>
           <div class="flip-card-back">
             <h1>Abuzer Amaan</h1>
-            <p>Fullstack Developer</p>
+            <p>FullStack Developer</p>
+
+            <a
+              target="_blank"
+              href="https://twitter.com/TheOpCoder"
+              class="fab fa-twitter-square"
+            />
             <a
               target="_blank"
               href="https://github.com/HabeebUllahTabrez"
@@ -75,7 +81,7 @@
             <a
               target="_blank"
               href="https://www.linkedin.com/in/mohammed-habeeb-ullah-tabrez-914001191/"
-              class="fab fa-linkedin
+              class="fab fa-linkedin"
             />
           </div>
         </div>
@@ -92,7 +98,14 @@
           </div>
           <div class="flip-card-back">
             <h1>Abdul Mateen Khan</h1>
-            <p>Fullstack Developer</p>
+            <p>FullStack Developer</p>
+            <!-- <p>We love that guy</p> -->
+
+            <a
+              target="_blank"
+              href="https://twitter.com/Sadiya_0613"
+              class="fab fa-twitter-square"
+            />
             <a
               target="_blank"
               href="https://github.com/Sadiya1noorain"
@@ -107,7 +120,7 @@
         </div>
       </div>
 
-            <div class="flip-card">
+      <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
@@ -118,7 +131,14 @@
           </div>
           <div class="flip-card-back">
             <h1>Mohammed Saad</h1>
-            <p>Fullstack Developer</p>
+            <p>FullStack Developer</p>
+            <!-- <p>We love that guy</p> -->
+
+            <a
+              target="_blank"
+              href="https://twitter.com/Sadiya_0613"
+              class="fab fa-twitter-square"
+            />
             <a
               target="_blank"
               href="https://github.com/Sadiya1noorain"
@@ -132,6 +152,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
   <div>
@@ -140,11 +161,10 @@
     </h2>
     <div class="section-4">
       <p>
-        The frontend is created using SvelteJS and it is deployed on Vercel
-       <a
+        The frontend is created using SvelteJS and it is deployed on Vercel <a
           target="_blank"
-          href="https://flashifyweb.xyz/"
-          class="know">https://flashifyweb.xyz</a
+          href="https://flashifyweb.xyz"
+          class="know">https://flashifyweb.xyz/</a
         >
       </p>
       <p>
@@ -155,6 +175,7 @@
           class="know">https://flashifyapi.onrender.com</a
         >
       </p>
+
       <p>To know more, contact us</p>
     </div>
   </div>

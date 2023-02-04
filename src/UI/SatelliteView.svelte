@@ -22,10 +22,8 @@
 
     $: latitudeValid = !isEmpty(latitude);
     $: longitudevalid = !isEmpty(longitude);
-    $: rDatevalid = !isEmpty(rDate);
-    $: pDatevalid = !isEmpty(pDate);
     $: isFormValid =
-        latitudeValid && longitudevalid && rDatevalid && pDatevalid;
+        latitudeValid && longitudevalid;
 
     const submitForm = () => {
         if (isFormValid) {
@@ -96,13 +94,13 @@
                     {#if isLoading1}
                         <LoadingSpinnerSatellite />
                     {/if}
-                    <h2>Date: {pDate}</h2>
+                    <h2>Date: 2016-02-01</h2>
                 </div>
                 <div class="recent-result" bind:this={recentImageDiv}>
                     {#if isLoading2}
                         <LoadingSpinnerSatellite />
                     {/if}
-                    <h2>Date: {rDate}</h2>
+                    <h2>Date: 2014-02-01</h2>
                 </div>
             {/if}
         </div>

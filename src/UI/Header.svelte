@@ -13,7 +13,7 @@
     rel="stylesheet"
 />
 <nav class="navbar nav-row">
-    <h2 class="navbar-logo">AstroPark</h2>
+    <h2 class="navbar-logo">Flashify</h2>
     <ul class="navbar-list">
         <li
             class:active={selectedButton === 0}

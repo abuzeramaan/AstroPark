@@ -32,7 +32,7 @@
     <div class="tab">
       <h3>APOD Homepage</h3>
       The APOD Homepage is an informative homepage. This homepage is designed with
-      the help of APOD API provided by NASA. The cover page of AstroPark changes
+      the help of APOD API provided by NASA. The cover page of Flashify changes
       on a daily basis. Along with the picture, user is provided with some descriptions
       related to the picture.
     </div>

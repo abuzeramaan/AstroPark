@@ -23,7 +23,7 @@
       Flashify is a project built using the NASA API. It has two segments - a
       Frontend and a Backend. Frontend portrays the information received
       from the backend. The backend works as an intermediate proxy server which processes
-      and pipes the response back to the frontend.<br /> AstroPart comprises of
+      and pipes the response back to the frontend.<br /> Flashify comprises of
       the given features.
       <br />- APOD Homepage
       <br />- Media Library
